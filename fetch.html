@@ -1,0 +1,63 @@
+<html lang = "en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    </head>
+<body>
+
+    <img id="poster" src="" />
+
+    <script>
+        // fetch
+        // ============
+        // HTTP requests
+        // Examples of APIs (http://www.omdbapi.com/#usage)
+        //JSON 
+        //Easier string concantenation (instead of using "" + var +"")
+        //Query string parameters
+        //authorization
+        //then/async programming
+       
+       //JSON example javascript object notation
+        var apikey = "83958917";
+        var url = "http://www.omdbapi.com/?t=The+Matrix";
+
+        fetch(`${url}&apikey=${apikey}`).then(function(response){
+            console.log(response);
+            return response.json();
+        }).then(function(jsonData){
+            console.log(jsonData);
+        
+            poster.src = jsonData.Poster;
+        });
+
+
+
+
+
+
+
+
+        var object = {
+            key: 123,
+            key2: "string",
+        }   
+        var  json = {
+            "key": 13,
+            "key2": "string"
+        };
+
+        var name = "brock";
+        //basic what ive been doing for a year now
+        var greeting = "Hello " + name + "!";
+        // template literal
+        var greeting2 = `Hello ${name} !
+        Multiple lines.
+        `;
+        // the "?" starts the "query string" then key = value, then to put mutliple query strings together connect them  with &
+         var website = "thebrockellis.com?greetMe=true&name=King Brock&fanfare=trumpts";
+
+    </script>
+</body>
+</html>

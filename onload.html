@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>OnLoad Functions</title>
+    </head>
+    <body onload="startPage()">
+
+        <img id="img" src="https://chiefswire.usatoday.com/wp-content/uploads/sites/70/2020/09/USATSI_13849292.jpg?w=1000&h=600&crop=1">
+
+        <script src="human.js"></script>
+        <script src="items.js"></script>
+        <script src="monster.js"></script>
+
+        <script>
+            console.log("Javascript is being evaluated");
+            
+            var pageImage = document.getElementById("img");
+
+            function startPage(){
+                console.log("Page has loaded");
+
+                startGame();
+            }
+            function startGame(){
+                var player_name =prompt("Please tell us your name");
+
+                game  = {
+                    human: human,
+                    monsters: monsters,
+                    items: items
+                }
+            }
+
+        </script>
+    </body>
+</html>

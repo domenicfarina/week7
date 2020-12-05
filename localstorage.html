@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Local Storage</title>
+	</head>
+	<body>
+	
+		<p>
+		  Current Players Name: <span id='currentName'></span>
+		</p>
+		
+		<p>
+		  Enter your name:
+		  <input type="text" id="nameInput" />
+		</p>
+	
+		<script>
+			var usersName = document.getElementById("currentName");
+			var input = document.getElementById("nameInput");
+			input.addEventListener("keyup", updateUsersName);
+		
+			function updateUsersName() {
+				currentName.innerText = input.value
+				
+				updateLocalStorage();
+			}
+			
+			function updateLocalStorage() {
+				localStorage.setItem("username", input.value);
+			}	
+		
+		
+		</script>
+	
+	</body>
+</html>
